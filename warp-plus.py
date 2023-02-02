@@ -6,7 +6,7 @@ import httpx
 from config import Vars, log
 from datetime import datetime
 from json import dumps
-from random import choice
+from random import choice,randint
 from string import ascii_letters, digits
 from sys import stdout
 from time import sleep
@@ -158,7 +158,7 @@ while True:
     print(f"\n[•] WARP+ ID: {referrer}")
     print(f"[✓] Added: {g} GB")
     print(f"[#] Total: {g} Good {b} Bad")
-    for i in range(20, 1, -1):
+    for i in range(randint(240,900), 1, -1):
       stdout.write(f"\033[1K\r[!] Cooldown: {i} seconds")
       stdout.flush()
       sleep(1)
